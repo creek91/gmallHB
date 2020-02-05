@@ -1,0 +1,25 @@
+#JDBC配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///gmall_study?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    password: 123456
+    username: root
+
+#mybatis配置
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.atguigu.gmall.user.bean
+#日志级别
+logging:
+  level:
+    com:
+      atguigu:
+        gmall:
+          user:
+            mapper: debug
+#服务端口号
+server:
+  port: 8080
